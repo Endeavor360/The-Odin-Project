@@ -13,8 +13,12 @@ html {
 h1 {
   text-align: center;
   margin: 30px auto;
+  font-size: 40px;
 }
 
+.main-container {
+  margin-top: 100px;
+}
 .main-container .container {
   margin: 20px auto;
   display: flex;
@@ -30,6 +34,10 @@ h1 {
   max-width: 200px;
   border: 2px solid orange;
   border-radius: 5px;
+  background-color: black;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 .main-container .container .object p {
   text-align: center;
@@ -41,4 +49,18 @@ h1 {
 }
 .main-container .container .object .tip-text {
   font-size: 11px;
+}
+.main-container .status-display {
+  text-align: center;
+}
+
+.winMsg {
+  display: none;
+  font-size: 30px;
+  border-radius: 5px black;
+  background-color: #e5e7eb;
+  color: #111827;
+}
+.winMsg .replayBtn {
+  border-radius: 10px;
 }/*# sourceMappingURL=styles.css.map */
