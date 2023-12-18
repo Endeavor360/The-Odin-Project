@@ -1,5 +1,22 @@
 const array = ["Rock", "Paper", "Scissors"];
 
+const userPoints = document.querySelector("#user-points");
+const compPoints = document.querySelector("#comp-points");
+const statusDisplay = document.querySelector(".status-display");
+const divs = document.querySelectorAll(".object");
+const winMessage = document.querySelector(".winMsg");
+const replayBtn = document.querySelector(".replayBtn");
+
+let shouldProceed = true; //used to make the .objct divs irresponisve when the game is over
+
+let playerSelection;
+let computerSelection;
+let roundStatus;
+
+divs.forEach((div) => {
+    div.addEventListener("click", handleClick);
+});
+
 function getComputerChoice() {
     const index = Math.floor(Math.random() * 3);
     return array[index];
@@ -20,23 +37,6 @@ function oneRound(playerSelection, computerSelection) {
         return "Draw";
     }
 }
-
-const userPoints = document.querySelector("#user-points");
-const compPoints = document.querySelector("#comp-points");
-
-const statusDisplay = document.querySelector(".status-display");
-
-const divs = document.querySelectorAll(".object");
-
-let shouldProceed = true; //used to make the .objct divs irresponisve when the game is over
-
-let playerSelection;
-let computerSelection;
-let roundStatus;
-
-divs.forEach((div) => {
-    div.addEventListener("click", handleClick);
-});
 
 function handleClick(e) {
     if (shouldProceed == true) {
@@ -61,9 +61,6 @@ function handleClick(e) {
         }
     }
 }
-
-const winMessage = document.querySelector(".winMsg");
-const replayBtn = document.querySelector(".replayBtn");
 
 function finalMessageDisplayer(winner) {
     winMessage.style.display = "flex";
