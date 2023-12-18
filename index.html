@@ -1,13 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles/styles.css">
   <link rel="shortcut icon" href="resources/alien.jpg" type="image/x-icon">
-  <title>Etch A Sketch</title>
+  <title>Have Fun</title>
 </head>
+
 <body>
+  <div class="main-container">
+    <h1>Let's play Rock-Paper-Scissors</h1>
+    <div class="points container">
+      <div class="player-computer"><p class="points-displayer">You : <span id="user-points">0</span></p></div>
+      <div class="player-computer"><p class="points-displayer">Computer : <span id="comp-points">0</span></p></div>
+    </div>
+    <div class="selctor container">
+      <div class="rock object">
+        <p class="description">Rock</p>
+        <p class="tip-text">(Press "R" key to select Rock)</p>
+      </div>
+      <div class="paper object">
+        <p class="description">Paper</p>
+        <p class="tip-text">(Press "P" key to select Paper)</p>
+      </div>
+      <div class="scissors object">
+        <p class="description">Scissors</p>
+        <p class="tip-text">(Press "S" key to select Scissors)</p>
+      </div>
+    </div>
+  </div>
   <script src="script.js"></script>
 </body>
+
 </html>
